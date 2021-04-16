@@ -1,0 +1,17 @@
+display String50 displayCreator()
+{
+
+    String30            res;
+    UserNameInfo    infoUser;
+    HRKPIQuestHeader header;
+
+
+    select firstOnly * from infoUser
+        where infoUser.User == this.createdBy;
+
+
+    res = infoUser.Name;
+
+    return res;
+
+}
